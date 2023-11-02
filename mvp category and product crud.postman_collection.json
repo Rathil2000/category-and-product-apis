@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "1418b287-3fa0-40cc-be2f-e26d4333e262",
+		"name": "mvp category and product crud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28048600"
+	},
+	"item": [
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "create product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTNhMDQ2MDUxNTJmYTY4ODU0MGVlNDkiLCJpYXQiOjE2OTgzMDEwMjUsImV4cCI6MTY5ODMwMjgyNSwidHlwZSI6ImFjY2VzcyJ9.U-aL-oaeeK_iqgVSIt9EqeWst5U49rC9BvfRJK416ks",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Product1\",\r\n    \"start_date\": \"2023-07-17T10:07:53Z\",\r\n    \"end_date\": \"2023-07-24T10:07:53Z\",\r\n    \"price\": \"90\"\r\n    //\"event\": \"64b4e62d1f255f3d63d21007\" //tickets value in event will be updated in edit-event api\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/v1/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTNhNDU1NjVmMDkxNGI1NDQ1ZWI3ZjgiLCJpYXQiOjE2OTgzMTc2ODEsImV4cCI6MTY5ODMxOTQ4MSwidHlwZSI6ImFjY2VzcyJ9.LLEX6zX95KTSpuchUStxUY1qTyEdajsNttEIOWicAmM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/v1/products/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"products",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get product",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "update product",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "create category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTNhMDQ2MDUxNTJmYTY4ODU0MGVlNDkiLCJpYXQiOjE2OTgzMDEwMjUsImV4cCI6MTY5ODMwMjgyNSwidHlwZSI6ImFjY2VzcyJ9.U-aL-oaeeK_iqgVSIt9EqeWst5U49rC9BvfRJK416ks",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "accessories",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2023-08-20T10:07:53Z",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "2023-08-25T10:07:53Z",
+									"type": "text"
+								},
+								{
+									"key": "about",
+									"value": "multiple design",
+									"type": "text"
+								},
+								{
+									"key": "email_confirmation_body",
+									"value": "Your product purchased from LINK.",
+									"type": "text"
+								},
+								{
+									"key": "products",
+									"value": "653a31b041baec922e00d444",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/v1/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get category",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get categories",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "update category",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete category",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "register",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
